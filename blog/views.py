@@ -8,7 +8,6 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
-<<<<<<< HEAD
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -34,5 +33,3 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
-=======
->>>>>>> d7f2eb5c293d3285d7dadec5c93218991e384525
